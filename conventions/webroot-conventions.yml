@@ -1,0 +1,31 @@
+generated: '2026-07-21'
+method: searched
+source: https://unityapi.webrootcloudav.com/docs
+docs: https://unityapi.webrootcloudav.com/docs
+api: Webroot Unity API
+notes: >-
+  Cross-cutting semantics for the Webroot Unity API, captured from the public
+  documentation introduction and live endpoint behavior. Fields left null are
+  not documented on the public (pre-login) surface and were NOT inferred.
+conventions:
+  protocol: REST over HTTPS
+  media_type: application/json
+  base_path: /service/api
+  authentication:
+    style: oauth2-bearer
+    detail: >-
+      Authenticate once at /auth/token (OAuth2 password grant) and present the
+      returned access token as an Authorization: Bearer header on all calls.
+    ref: authentication/webroot-authentication.yml
+  request_id: null
+  idempotency: null
+  pagination: null
+  versioning: null
+  error_envelope:
+    format: json
+    detail: >-
+      Errors are returned as application/json with standard HTTP status codes
+      (verified: 400 on the token endpoint, 401 on unauthenticated resource
+      access). Full error-envelope schema is behind the login-gated API
+      reference and was not captured.
+  rate_limit_signaling: null

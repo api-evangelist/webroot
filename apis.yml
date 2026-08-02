@@ -1,7 +1,15 @@
 aid: webroot
 name: Webroot
-description: Webroot is a company surfaced as a portfolio company of accel and added to the API Evangelist
-  network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Webroot is a cybersecurity company, now part of OpenText Cybersecurity, that
+  provides cloud-based endpoint protection, DNS protection, security awareness
+  training, and the BrightCloud threat intelligence services. Its developer
+  surface is the Webroot Unity API — a REST/JSON platform secured with OAuth2
+  that lets partners and administrators manage product licenses and orders,
+  query order information, and request endpoint status across the Webroot Global
+  Site Manager (GSM) console. Webroot business and BrightCloud product pages now
+  redirect into OpenText Cybersecurity, and the Unity API documentation remains
+  actively maintained.
 url: https://raw.githubusercontent.com/api-evangelist/webroot/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +17,51 @@ x-backed-by:
 - accel
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://unityapi.webrootcloudav.com/Docs/Images/ot_favicon.png
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
 - Company
-apis: []
+- Cybersecurity
+- Endpoint Protection
+- Threat Intelligence
+- Security
+- Antivirus
+- DNS Protection
+- OpenText
+apis:
+- name: Webroot Unity API
+  description: >-
+    REST/JSON management API for the Webroot platform. Authenticate once via
+    OAuth2 at /auth/token, then call /service/api resources with a bearer token
+    to provision and update product licenses, place and query orders, and
+    request endpoint status across the Global Site Manager (GSM) console.
+  humanURL: https://unityapi.webrootcloudav.com/docs
+  baseURL: https://unityapi.webrootcloudav.com/service/api
+  tags:
+  - Cybersecurity
+  - Endpoint Protection
+  - Licensing
+  properties:
+  - type: Documentation
+    url: https://unityapi.webrootcloudav.com/docs
+  - type: APIReference
+    url: https://unityapi.webrootcloudav.com/Docs/en/APIDoc/Documentation
+  - type: Authentication
+    url: authentication/webroot-authentication.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +70,36 @@ maintainers:
 common:
 - type: Website
   url: http://www.webroot.com
+- type: DeveloperPortal
+  url: https://unityapi.webrootcloudav.com/docs
+- type: Documentation
+  url: https://unityapi.webrootcloudav.com/docs
+- type: APIReference
+  url: https://unityapi.webrootcloudav.com/Docs/en/APIDoc/Documentation
+- type: GettingStarted
+  url: https://unityapi.webrootcloudav.com/docs
+- type: StatusPage
+  url: https://status.webroot.com/
+- type: TermsOfService
+  url: https://www.webroot.com/legal/
+- type: PrivacyPolicy
+  url: https://www.webroot.com/us/en/legal/privacy
+- type: Authentication
+  url: authentication/webroot-authentication.yml
+- type: Conventions
+  url: conventions/webroot-conventions.yml
+- type: Lifecycle
+  url: lifecycle/webroot-lifecycle.yml
+- type: Conformance
+  url: conformance/webroot-conformance.yml
+- type: DomainSecurity
+  url: security/webroot-domain-security.yml
+- type: WellKnown
+  url: well-known/webroot-well-known.yml
+- type: LLMsTxt
+  url: llms/webroot-llms.txt
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 7
+  pass: local-v1

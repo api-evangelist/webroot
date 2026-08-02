@@ -1,0 +1,30 @@
+# Webroot
+
+> Webroot (now part of OpenText Cybersecurity) provides endpoint protection,
+> DNS protection, security awareness training, and BrightCloud threat
+> intelligence. Its developer-facing surface is the Webroot Unity API — a
+> REST/JSON platform (OAuth2) for managing product licenses, orders, sites, and
+> endpoint status across the Webroot Global Site Manager (GSM) console.
+
+## APIs
+
+- [Webroot Unity API](https://unityapi.webrootcloudav.com/docs): REST/JSON management API. Authenticate once via OAuth2 (`/auth/token`), then call `/service/api` resources with a bearer token. Covers license/order provisioning, order queries, and endpoint status.
+
+## Docs
+
+- [Unity API Documentation](https://unityapi.webrootcloudav.com/docs): guide + API reference (login-gated OpenAPI definition)
+- [Unity API Reference](https://unityapi.webrootcloudav.com/Docs/en/APIDoc/Documentation): complete list of Unity API operations
+- [Webroot Business (OpenText legacy)](https://cybersecurity.opentext.com/legacy/webroot/): product overview
+- [BrightCloud Threat Intelligence](https://www.opentext.com/products/threat-intelligence): threat intelligence services
+
+## Operations
+
+- [Status Page](https://status.webroot.com/)
+- [Legal / Terms](https://www.webroot.com/legal/)
+- [Privacy Policy](https://www.webroot.com/us/en/legal/privacy)
+
+## Notes
+
+- No public GitHub organization, package registry SDK, MCP server, or `/.well-known`
+  discovery documents were found (all probed paths returned 404 / not found).
+- The OpenAPI definition is offered inside the docs but requires a Unity API login.

@@ -1,0 +1,30 @@
+generated: '2026-07-21'
+method: searched
+source: https://unityapi.webrootcloudav.com/docs
+docs: https://unityapi.webrootcloudav.com/docs
+notes: >-
+  The Webroot Unity API authenticates with OAuth2. A single token is obtained
+  from the token endpoint and then presented as a bearer token on subsequent
+  REST calls. Verified live: the token endpoint https://unityapi.webrootcloudav.com/auth/token
+  returns HTTP 400 (application/json) to an unauthenticated request, and
+  protected resources under /service/api (e.g. /service/api/console/gsm) return
+  HTTP 401 (application/json) without a token. Access is scoped to a customer's
+  Unity API user credentials; there is no public self-serve signup.
+summary:
+  types:
+  - oauth2
+  oauth2_flows:
+  - password
+  bearer: true
+schemes:
+- name: UnityOAuth2
+  type: oauth2
+  flow: password
+  tokenUrl: https://unityapi.webrootcloudav.com/auth/token
+  bearerFormat: JWT
+  description: >-
+    OAuth2 resource-owner password-credentials grant using Unity API user
+    credentials (client id/secret + username/password), returning an access
+    token used as an Authorization: Bearer token on /service/api calls.
+  sources:
+  - probe:https://unityapi.webrootcloudav.com/auth/token

@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://unityapi.webrootcloudav.com/docs
+api: Webroot Unity API
+notes: >-
+  Lifecycle signals for the Webroot Unity API and the Webroot (OpenText
+  Cybersecurity) platform. The Unity API docs site is actively maintained and
+  carries a "What's New?" section (latest entry observed published 2026-07-06).
+  No formal deprecation/sunset policy or SLA is published on the public surface.
+versioning:
+  scheme: unknown
+  docs: https://unityapi.webrootcloudav.com/docs
+changelog:
+  present: true
+  name: What's New?
+  url: https://unityapi.webrootcloudav.com/docs
+  latest_seen: '2026-07-06'
+  note: entries are behind the docs login; presence and latest date verified pre-login
+deprecation:
+  policy_url: null
+  sunset_header: null
+sla:
+  url: null
+status_page: https://status.webroot.com/
+support:
+  community: Webroot Unity API Community Forum

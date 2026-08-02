@@ -1,0 +1,23 @@
+generated: '2026-07-21'
+method: derived
+source: live probes of https://unityapi.webrootcloudav.com + docs
+api: Webroot Unity API
+notes: >-
+  Cross-cutting standards conformance for the Webroot Unity API, derived from
+  observed authentication behavior and public docs. No published OpenAPI (the
+  definition is login-gated), so spec-level assertions are limited.
+standards:
+- id: oauth2
+  conforms: true
+  evidence: >-
+    Live OAuth2 token endpoint at /auth/token (HTTP 400 to unauthenticated
+    request); protected /service/api resources return 401 without a bearer token.
+- id: rest-json
+  conforms: true
+  evidence: REST over HTTPS with application/json responses.
+- id: oidc
+  conforms: false
+  evidence: no /.well-known/openid-configuration (404).
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: error responses observed as application/json, not application/problem+json.

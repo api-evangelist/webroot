@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: searched
+source: live probes of /.well-known/* on Webroot hosts
+notes: >-
+  No /.well-known discovery documents are published on any Webroot host. Every
+  probed path returned 404. Absence recorded as valid data.
+hosts:
+- host: https://unityapi.webrootcloudav.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://www.webroot.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+- host: https://cybersecurity.opentext.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
