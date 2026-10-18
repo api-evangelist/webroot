@@ -47,6 +47,15 @@ modified: '2026-10-06'
 tags:
 - Company
 - Cybersecurity
+- Endpoint Security
+- Threat Intelligence
+- Security
+- Antivirus
+- DNS Protection
+- OpenText
+tags_raw:
+- Company
+- Cybersecurity
 - Endpoint Protection
 - Threat Intelligence
 - Security
@@ -63,6 +72,10 @@ apis:
   humanURL: https://unityapi.webrootcloudav.com/docs
   baseURL: https://unityapi.webrootcloudav.com/service/api
   tags:
+  - Cybersecurity
+  - Endpoint Security
+  - Licensing
+  tags_raw:
   - Cybersecurity
   - Endpoint Protection
   - Licensing
